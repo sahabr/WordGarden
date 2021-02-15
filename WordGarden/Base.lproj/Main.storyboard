@@ -80,7 +80,11 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEP-Lx-Jvd">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="sfo-Ug-Pyd"/>
+                                            <action selector="guessedLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="8eN-xc-9rA"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gs-Ug-mQf">
                                         <rect key="frame" x="66" y="0.0" width="102" height="30"/>
@@ -91,7 +95,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9gs-Ug-mQf" firstAttribute="centerX" secondItem="aiO-OR-B9R" secondAttribute="centerX" id="dI5-md-Ph6"/>
+                                    <constraint firstItem="9gs-Ug-mQf" firstAttribute="leading" secondItem="XEP-Lx-Jvd" secondAttribute="trailing" constant="34" id="4qu-c6-Vcg"/>
                                 </constraints>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-JM-tQc">
